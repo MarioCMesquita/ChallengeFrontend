@@ -1,0 +1,25 @@
+<content>
+    <div class="displayResult" *ngIf="root">
+        <div class="tree-item root">{{root}}</div>
+        <div class="tree-branchs">
+            <div class="leftBranch">
+                <span *ngFor="let itemF of leftBranch">
+                    <div class="tree-item leftBranch">{{itemF}}</div>
+                </span>
+            </div>
+            <div class="rightBranch">
+                <span *ngFor="let itemR of rightBranch">
+                    <div class="tree-item rightBranch">{{itemR}}</div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <h4>Digite números aleatórios separados por vírgula e clique em Gerar.</h4>
+        <div class="row">
+            <label>Números</label>
+            <input id="numbers" type="text" placeholder="7, 5, 13, 9, 1, 6, 4" >
+        </div>
+        <button class="btn" (click)="getTree()" >Gerar</button>
+    </div>
+</content>
